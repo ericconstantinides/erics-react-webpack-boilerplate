@@ -8,31 +8,35 @@ module.exports = {
   },
   output: {
     filename: '[name].[hash].js',
-    path: path.resolve('./dist'),
+    path: path.resolve('./dist')
   },
   module: {
     rules: [
       {
         test: /\.js$/,
         exclude: ['/node_modules'],
-        use: [{ loader: 'babel-loader' }],
+        use: [{ loader: 'babel-loader' }]
       },
       {
         test: /\.s(a|c)ss$/,
-        use: [{
-          loader: 'style-loader'
-        }, {
-          loader: 'css-loader'
-        }, {
-          loader: 'sass-loader'
-        }],
-   	  }
+        use: [
+          {
+            loader: 'style-loader'
+          },
+          {
+            loader: 'css-loader'
+          },
+          {
+            loader: 'sass-loader'
+          }
+        ]
+      }
     ]
   },
   plugins: [
     new HtmlWebPackPlugin({
       template: 'index.html'
     }),
-    new CleanWebpackPlugin(),
+    new CleanWebpackPlugin()
   ]
 }
