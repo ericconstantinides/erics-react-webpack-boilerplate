@@ -1,7 +1,7 @@
 {
-  "name": "react-webpack-boilerplate",
+  "name": "erics-react-webpack-boilerplate",
   "version": "1.0.0",
-  "description": " very simple boilerplate that I use to run React",
+  "description": "A very simple boilerplate that I use to run React",
   "main": "index.js",
   "directories": {
     "test": "test"
